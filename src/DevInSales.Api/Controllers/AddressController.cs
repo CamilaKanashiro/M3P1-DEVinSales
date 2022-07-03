@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevInSales.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AddressController : ControllerBase

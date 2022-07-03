@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using DevInSales.Core.Entities;
 using DevInSales.Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DevInSales.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/deliver")]
     public class DeliveryController : ControllerBase

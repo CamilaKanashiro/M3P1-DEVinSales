@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DevInSales.Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
@@ -33,7 +34,6 @@ namespace DevInSales.Api.Controllers
         /// <returns></returns>
         /// <response code="204">A atualização teve sucesso.</response>
         /// <response code="404">Not Found. O Produto solicitado não existe.</response>
-        [Authorize]
         [HttpGet("{id}")]
         public ActionResult<Product> ObterProdutoPorId(int id)
         {
